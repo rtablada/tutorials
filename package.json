@@ -1,0 +1,35 @@
+{
+  "name": "@ember-learn/tutorial-source",
+  "version": "0.0.0",
+  "description": "Markdown files for Ember Tutorials",
+  "homepage": "https://github.com/ember-learn/tutorial-source#readme",
+  "bugs": {
+    "url": "https://github.com/ember-learn/tutorial-source/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-learn/tutorial-source.git"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Chris Manson <chris@stonecircle.io>",
+    "Ember.JS Learning team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "release": "np",
+    "test": "mocha",
+    "test-watch": "npm test -- -w"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^5.0.0",
+    "np": "*",
+    "guidemaker-link-checker": "^1.0.0"
+  }
+}
