@@ -16,7 +16,7 @@ check out the [Super Rentals Tutorial](../../tutorial/ember-cli) for something m
 
 ## What You'll Build
 
-Here's a mockup of the design we'll be shooting for as we build the Rolodex
+Here's a mockup of the design we'll be shooting for as we build the Contact Book
 application:
 
 This app is meant to be allow users to manage and search through their contact
@@ -29,7 +29,7 @@ information quickly and easily. We'll want this app be able to:
 
 We'll build out each of the these features step-by-step using Ember's core
 concepts. If you get stuck at any point or would like to jump ahead to the
-finished product, checkout [the github repo](https://github.com/ember-learn/ember-rolodex) for the source code for the project you will be building in this guide.
+finished product, checkout [the github repo](https://github.com/ember-learn/contact-book) for the source code for the project you will be building in this guide.
 Each step of this guide is a single commit on the master branch of the repo,
 allowing you to follow along or to debug errors or typos.
 
@@ -55,7 +55,7 @@ If you haven't already, install the latest version of Ember-CLI globally:
 npm install -g ember-cli@latest
 ```
 
-Ember-CLI is the Ember Command Line Interface. It's a tool that provides a ton of helpful 
+Ember-CLI is the Ember Command Line Interface. It's a tool that provides a ton of helpful
 features, like generators and blueprints for new applications. It also wraps the Ember
 build system and development server which builds and packages your app for distribution.
 While it is possible to set everything up on your own by including scripts or using other
@@ -65,13 +65,13 @@ Once the CLI is installed, you can generate a new Ember application by running
 `ember new` and providing an application name:
 
 ```sh
-ember new ember-rolodex
+ember new contact-book
 ```
 
 A new project we be generated inside your current directory. Let's check it out:
 
 ```sh
-cd ember-rolodex
+cd contact-book
 ```
 
 ## Directory Structure

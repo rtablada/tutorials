@@ -16,7 +16,7 @@
     - title: "JavaScript Primer"
       url: "js-primer"
 
-- title: "Ember 101: Rolodex"
+- title: "Ember 101: Contact Book"
   url: '101-tutorial'
   pages:
     - title: "Setting Up"
@@ -29,12 +29,14 @@
       url: "using-a-container-component"
     - title: "Creating the Contact List"
       url: "creating-the-contact-list"
-    - title: "Making Contacts Editable"
-      url: "making-contacts-editable"
-    - title: "Refactoring with Routes"
-      url: "refactoring-with-routes"
+    - title: "Loading Contacts from the Server"
+      url: "loading-contacts-from-the-server"
+    - title: "Creating and Editing Contacts"
+      url: "creating-and-editing-contacts"
     - title: "Adding a Service"
       url: "adding-a-service"
+    - title: "Refactoring with Routes"
+      url: "refactoring-with-routes"
     - title: "Testing the App"
       url: "testing-the-app"
     - title: "Finishing Up"
