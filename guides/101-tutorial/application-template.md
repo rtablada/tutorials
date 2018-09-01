@@ -1,4 +1,4 @@
-Now that we've bootstrapped our Rolodex app, we can start setting up the application shell.
+Now that we've bootstrapped our Contact Book app, we can start setting up the application shell.
 We'll start by adding some HTML and CSS that will provide the overall structure for the app.
 
 As a reminder, here is the mockup for our app, the highlighted portions we'll be adding in this section of the guide
