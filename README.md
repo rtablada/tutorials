@@ -18,8 +18,9 @@ You will need the following things properly installed on your computer.
 To see what a local copy of the Tutorial markdown looks like:
 
 * Clone the [Ember Tutorial App](https://github.com/ember-learn/tutorial-app) App repository
-* link the `ember-tutorials-source` repository by running `npm link` inside this repository, then `npm link @ember-learn/cli-guides` in the guides-app
-* `npm install` and `ember serve` in the guides app
+* run `npm install` in the tutorial app directory
+* link the `tutorial-source` repository by running `npm link` inside this repository, then `npm link @ember-learn/tutorial-source` in the tutorial-app directory
+* run `ember serve` in the tutorial app directory
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
