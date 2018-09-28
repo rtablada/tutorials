@@ -4,50 +4,17 @@
     - title: "The Ember CLI"
       url: ""
 
-- title: "Getting Started"
-  url: 'getting-started'
+- title: "Quick Start"
+  url: 'quick-start'
   pages:
     - title: "Quick Start"
-      url: "quick-start"
-    - title: "Installing Ember"
       url: "index"
-    - title: "Core Concepts"
-      url: "core-concepts"
-    - title: "JavaScript Primer"
-      url: "js-primer"
 
-- title: "Ember 101: Contact Book"
-  url: '101-tutorial'
-  pages:
-    - title: "Setting Up"
-      url: "setting-up"
-    - title: "The Application Template"
-      url: "application-template"
-    - title: "Creating the Details Component"
-      url: "creating-the-details-component"
-    - title: "Using a Container Component"
-      url: "using-a-container-component"
-    - title: "Creating the Contact List"
-      url: "creating-the-contact-list"
-    - title: "Loading Contacts from the Server"
-      url: "loading-contacts-from-the-server"
-    - title: "Creating and Editing Contacts"
-      url: "creating-and-editing-contacts"
-    - title: "Adding a Service"
-      url: "adding-a-service"
-    - title: "Refactoring with Routes"
-      url: "refactoring-with-routes"
-    - title: "Testing the App"
-      url: "testing-the-app"
-    - title: "Finishing Up"
-      url: "finishing-up"
-
-
-- title: "Tutorial"
-  url: 'tutorial'
+- title: "Super Rentals"
+  url: 'super-rentals'
   pages:
     - title: "Creating Your App"
-      url: "ember-cli"
+      url: "setting-up"
     - title: "Planning Your App"
       url: 'acceptance-test'
     - title: "Routes and Templates"
