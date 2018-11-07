@@ -12,7 +12,7 @@ necessary for you to start using Ember to build ambitious web apps, including:
 This tutorial is meant to build an Ember.js app progressively, starting
 small and adding concepts over time. If you're new to Single Page App
 development, this is the best guide to start with. If you've used Ember before and want a refresher,
-check out the [Super Rentals Tutorial](../../tutorial/ember-cli) for something more fast paced.
+check out the [Super Rentals Tutorial](../../super-rentals/) for something more fast paced.
 
 ## What You'll Build
 
@@ -40,7 +40,7 @@ and JavaScript. If you haven't ever used any of these before, you should
 probably start with the following guides: (@todo: Add recommendations here)
 
 You'll need to have Git, Node.js, and NPM installed on your computer for this
-tutorial. Checkout the [Installing Ember](../../getting-started) guide for more
+tutorial. Checkout the [Installing Ember](https://guides.emberjs.com/release/getting-started/) guide for more
 details.
 
 You'll also need a modern web browser. We'll be making use of some of the latest

@@ -7,7 +7,7 @@ Let's start by building our "about" page.
 
 In Ember, when we want to make a new page that can be visited using a URL,
 we need to generate a "route" using Ember CLI. For a quick overview of how
-Ember structures things, see [our diagram on the Core Concepts page](../../getting-started/core-concepts/).
+Ember structures things, see [our diagram on the Core Concepts page](https://guides.emberjs.com/release/getting-started/core-concepts/).
 
 Let's use Ember's route generator to start our `about` route.
 
@@ -120,7 +120,7 @@ Moving around our site is a bit of a pain right now, so let's make that easier.
 We'll put a link to the contact page on the about page, and a corresponding link to the about
 page on the contact page.
 
-To do that, we'll use a [`{{link-to}}`](../../templates/links/) helper that Ember provides
+To do that, we'll use a [`{{link-to}}`](https://guides.emberjs.com/release/templates/links/) helper that Ember provides
 that makes it easy to link between our routes.  Let's adjust our `about.hbs` file:
 
 ```handlebars {data-filename="app/templates/about.hbs" data-diff="+9,+10,+11"}
@@ -366,7 +366,7 @@ If they don't, our test will fail.
 The third optional argument allows us to provide a nicer message which will be shown if this test fails.
 
 In our tests, we also call two helpers (`visit` and `click`) one after another. Although Ember does a number
-of things when we make those calls, Ember hides those complexities by giving us these [asynchronous test helpers](../../testing/acceptance/#toc_asynchronous-helpers).
+of things when we make those calls, Ember hides those complexities by giving us these [asynchronous test helpers](https://guides.emberjs.com/release/testing/acceptance/#toc_asynchronous-helpers).
 
 If you left `ember test` running, it should have automatically updated to show the three tests related to
 navigating have now passed.
