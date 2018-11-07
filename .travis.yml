@@ -20,8 +20,12 @@ env:
 
 before_install:
   - npm config set spin false
+  - npm i -g npm@6
 
 script:
+  - set -o errexit
+  - npm run lint:md
+  - npm run lint:alex
   - npm run lint:hbs
   - npm run lint:js
   - npm test
