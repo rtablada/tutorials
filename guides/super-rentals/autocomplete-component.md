@@ -466,7 +466,7 @@ represented by the variable `FILTERED_ITEMS` when any value is set.
 
 We force the action by generating a `keyUp` event on our input field, and then assert that only one item is rendered.
 
-First add `triggerKeyEvent` and `fillIn` to the list of imports.  The [`fillIn`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#fillin) helper simulates the user filling in the element. The [`triggerKeyEvent`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#triggerkeyevent) helper sends a key stroke event to the UI, simulating the user typing a key.
+First add `triggerKeyEvent` and `fillIn` to the list of imports.  The [`fillIn`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#fillin) helper simulates the user filling in the element. The [`triggerKeyEvent`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#triggerkeyevent) helper sends a key-stroke event to the UI, simulating the user typing a key.
 
 ```javascript {data-filename="tests/integration/components/list-filter-test.js" data-diff="+3"}
 import { module, test } from 'qunit';

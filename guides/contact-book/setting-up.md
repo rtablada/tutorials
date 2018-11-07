@@ -16,7 +16,7 @@ check out the [Super Rentals Tutorial](../../super-rentals/) for something more 
 
 ## What You'll Build
 
-Here's a mockup of the design we'll be shooting for as we build the Contact Book
+Here's a mockup of the design we'll be aiming for as we build the Contact Book
 application:
 
 This app is meant to be allow users to manage and search through their contact
