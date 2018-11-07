@@ -2,10 +2,12 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'tutorials-source',
+    modulePrefix: '@ember-learn/tutorial-source',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'trailing-history',
+    historySupportMiddleware: true,
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,6 +22,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    'ember-meta': {
+      description: 'Ember Tutorials'
+    },
+
+    guidemaker: {
+      title: 'Ember Tutorials'
     }
   };
 
