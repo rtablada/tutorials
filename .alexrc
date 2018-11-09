@@ -1,0 +1,14 @@
+{
+  "allow": [
+    "host-hostess",
+    "watchman-watchwoman",
+    "disabled",
+    "hook",
+    "hooks",
+    "executed",
+    "execute",
+    "failure",
+    "failures",
+    "dive"
+  ]
+}

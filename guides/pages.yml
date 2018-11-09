@@ -14,7 +14,7 @@
   url: 'super-rentals'
   pages:
     - title: "Creating Your App"
-      url: "setting-up"
+      url: "index"
     - title: "Planning Your App"
       url: 'acceptance-test'
     - title: "Routes and Templates"

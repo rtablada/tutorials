@@ -19,7 +19,7 @@ As before when we created the [`rental-listing` component](../simple-component/)
 In our `app/templates/rentals.hbs` template file, we'll add a reference to our new `list-filter` component.
 
 Notice that below we "wrap" our rentals markup inside the open and closing mentions of `list-filter` on lines 12 and 20.
-This is an example of the [**block form**](../../components/wrapping-content-in-a-component/) of a component,
+This is an example of the [**block form**](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/) of a component,
 which allows a Handlebars template to be rendered _inside_ the component's template wherever the `{{yield}}` expression appears.
 
 In this case we are passing, or "yielding", our filter data to the inner markup as a variable called `filteredResults` (line 14/).
@@ -62,10 +62,10 @@ We want the component to simply provide an input field and yield the results lis
 {{yield results}}
 ```
 
-The template contains an [`{{input}}`](../../templates/input-helpers/) helper that renders as a text field, in which the user can type a pattern to filter the list of cities used in a search.
+The template contains an [`{{input}}`](https://guides.emberjs.com/release/templates/input-helpers/) helper that renders as a text field, in which the user can type a pattern to filter the list of cities used in a search.
 The `value` property of the `input` will be kept in sync with the `value` property in the component.
 
-Another way to say this is that the `value` property of `input` is [**bound**](../../object-model/bindings/) to the `value` property of the component.
+Another way to say this is that the `value` property of `input` is [**bound**](https://guides.emberjs.com/release/object-model/bindings/) to the `value` property of the component.
 If the property changes, either by the user typing in the input field, or by assigning a new value to it in our program,
 the new value of the property is present in both the rendered web page and in the code.
 
@@ -296,7 +296,7 @@ You can now proceed on to implement the [next feature](../service/), or continue
 
 Now that we've created a new component for filtering a list,
 we want to create a test to verify it.
-Let's use a [component integration test](../../testing/testing-components/)
+Let's use a [component integration test](https://guides.emberjs.com/release/testing/testing-components/)
 to verify our component behavior,
 similar to [how we tested our rental listing component earlier](../simple-component/#toc_an-integration-test).
 
@@ -466,7 +466,7 @@ represented by the variable `FILTERED_ITEMS` when any value is set.
 
 We force the action by generating a `keyUp` event on our input field, and then assert that only one item is rendered.
 
-First add `triggerKeyEvent` and `fillIn` to the list of imports.  The [`fillIn`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#fillin) helper simulates the user filling in the element. The [`triggerKeyEvent`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#triggerkeyevent) helper sends a key stroke event to the UI, simulating the user typing a key.
+First add `triggerKeyEvent` and `fillIn` to the list of imports.  The [`fillIn`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#fillin) helper simulates the user filling in the element. The [`triggerKeyEvent`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#triggerkeyevent) helper sends a key-stroke event to the UI, simulating the user typing a key.
 
 ```javascript {data-filename="tests/integration/components/list-filter-test.js" data-diff="+3"}
 import { module, test } from 'qunit';

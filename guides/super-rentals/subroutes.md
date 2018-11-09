@@ -7,7 +7,7 @@ Up to this point, we've generated four top level routes.
 
 Our `rentals` route is going to serve multiple functions.
 From our [application tests](../acceptance-test/), we've shown that we want our users to be able to browse and search rentals, as well as see detailed information for individual rentals.
-To satisfy that requirement, we are going to make use of Ember's [nested route capability](../../routing/defining-your-routes/#toc_nested-routes).
+To satisfy that requirement, we are going to make use of Ember's [nested route capability](https://guides.emberjs.com/release/routing/defining-your-routes/#toc_nested-routes).
 
 By the end of this section we want to have created the following new routes:
 

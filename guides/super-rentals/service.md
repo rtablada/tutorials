@@ -9,7 +9,7 @@ To implement this feature, we will take advantage of several Ember concepts:
 
 Before implementing a map, we need to make a 3rd party map API available to our Ember app.
 There are several ways to include 3rd party libraries in Ember.
-See the guides section on [managing dependencies](../../addons-and-dependencies/managing-dependencies/)
+See the guides section on [managing dependencies](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
 as a starting point when you need to add one.
 
 
@@ -178,13 +178,13 @@ This `div` will act as a place for the 3rd party map API to render the map to.
 Next, update the component to append the map output to the `div` element we created.
 
 We provide the maps service into our component by initializing a property of our component, called `maps`.
-Services are commonly made available in components and other Ember objects by ["service injection"](../../applications/services/#toc_accessing-services).
+Services are commonly made available in components and other Ember objects by ["service injection"](https://guides.emberjs.com/release/applications/services/#toc_accessing-services).
 When you initialize a property with `import { inject } from '@ember/service';`,
 Ember tries to set that property with a service matching its name.
 
 With our `maps` service, our component will call the `getMapElement` function with the provided location.
 We append the map element we get back from the service by implementing `didInsertElement`,
-which is a [component lifecycle hook](../../components/the-component-lifecycle/#toc_integrating-with-third-party-libraries-with-didinsertelement).
+which is a [component lifecycle hook](https://guides.emberjs.com/release/components/the-component-lifecycle/#toc_integrating-with-third-party-libraries-with-didinsertelement).
 This function runs during the component render, after the component's markup gets inserted into the page.
 
 ```javascript {data-filename="app/components/location-map.js" data-diff="+2,+5,+7,+8,+9,+10,+11,+12"}
@@ -373,10 +373,10 @@ module('Integration | Component | location map', function(hooks) {
 });
 ```
 
-In the `beforeEach` function that runs before each test, we use the built-in function `this.register` to [register](../../applications/dependency-injection/#toc_factory-registrations) our stub service in place of the maps service.
+In the `beforeEach` function that runs before each test, we use the built-in function `this.register` to [register](https://guides.emberjs.com/release/applications/dependency-injection/#toc_factory-registrations) our stub service in place of the maps service.
 Registration makes an object available to your Ember application for things like loading components from templates and injecting services in this case.
 
-The call to the function `this.inject.service` [injects](../../applications/dependency-injection/#toc_ad-hoc-injections) the service we just registered into the context of the tests, so each test may access it through `this.mapsService`.
+The call to the function `this.inject.service` [injects](https://guides.emberjs.com/release/applications/dependency-injection/#toc_ad-hoc-injections) the service we just registered into the context of the tests, so each test may access it through `this.mapsService`.
 In the example we assert that `calledWithLocation` in our stub is set to the location we passed to the component.
 
 ### Stubbing Services in Application Tests
@@ -422,7 +422,7 @@ module('Acceptance | list rentals', function(hooks) {
 ```
 
 What's happening here is we are adding our own stub maps service that simply creates an empty div.
-Then we are putting it in Ember's [registry](../../applications/dependency-injection/#toc_factory-registrations) using the [owner](https://emberjs.com/api/ember/3.0/functions/@ember%2Fapplication/getOwner) object given by the test context. When our component loads the maps service, it gets our stub service instead.
+Then we are putting it in Ember's [registry](https://guides.emberjs.com/release/applications/dependency-injection/#toc_factory-registrations) using the [owner](https://emberjs.com/api/ember/3.0/functions/@ember%2Fapplication/getOwner) object given by the test context. When our component loads the maps service, it gets our stub service instead.
 That way every time that component is created, our stub map service gets injected over the Google maps service.
 Now when we run our application tests, you'll notice that maps do not get rendered as the test runs.
 
