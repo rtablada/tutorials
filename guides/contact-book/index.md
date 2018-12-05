@@ -12,7 +12,7 @@ necessary for you to start using Ember to build ambitious web apps, including:
 This tutorial is meant to build an Ember.js app progressively, starting
 small and adding concepts over time. If you're new to Single Page App
 development, this is the best guide to start with. If you've used Ember before and want a refresher,
-check out the [Super Rentals Tutorial](../../super-rentals/) for something more fast paced.
+check out the [Super Rentals Tutorial](../super-rentals/) for something more fast paced.
 
 ## What You'll Build
 
