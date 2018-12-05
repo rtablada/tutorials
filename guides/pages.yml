@@ -10,6 +10,18 @@
     - title: "Quick Start"
       url: "index"
 
+- title: "Ember 101: Rolodex"
+  url: 'contact-book'
+  pages:
+    - title: "Setting Up"
+      url: "index"
+    - title: "The Application Template"
+      url: "application-template"
+    - title: "Creating a Contact Item Component"
+      url: "contact-item-component"
+    - title: "Creating a Contact List Component"
+      url: "contact-list-component"
+
 - title: "Super Rentals"
   url: 'super-rentals'
   pages:
