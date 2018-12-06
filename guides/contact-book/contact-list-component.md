@@ -134,8 +134,8 @@ First, let's try to display the value of `{{this.contacts}}` in the `ul` of our 
 Now our application is displaying `[object Object],[object Object]` in the `ul` because Ember is calling `toString` on our array of data.
 To work with this array, we'll need to use the Handlebars `each` helper.
 
-The `each` helper takes in a single argument (the array that we want to loop through), then calls a "block" or callback for each item in the array of data.
-When using a helper that calls a block we need to use a `#` before the helper name and then add a closing `/` tag.
+The `each` helper takes in a single argument (the array that we want to loop through), then calls a "block" or closure function for each item in the array of data.
+When using a helper that calls a block we need to use a `#` before the helper name and then add a closing `/` tag for the block.
 In this each loop, let's create the `ContactItem` for Zoey:
 
 ```handlebars {data-filename="app/templates/components/contact-list.hbs" data-diff="+4,+5,+6,-7,-8"}
@@ -159,9 +159,9 @@ In this each loop, let's create the `ContactItem` for Zoey:
 Now we have two copies of the Zoey contact, but this isn't what we really wanted.
 Instead we want to show a `ContactItem` for every object in our `this.contacts` array.
 To do this, we'll need the value of each item as we loop through the array using the `each` helper.
-In Handlebars block helpers can yield variables back to our template similar to arguments in JavaScript callback functions.
+In Handlebars block helpers can yield variables back to our template similar to arguments in JavaScript closure functions.
 To use these values we need to add `as ||` to our `each` loop.
-Let's call this yielded value `contact` since it will contain a single contact from our array:
+Let's call this yielded variable `contact` since it will contain a single contact from our array:
 
 ```handlebars {data-filename="app/templates/components/contact-list.hbs" data-diff="+4,-5"}
 <div>

@@ -21,6 +21,8 @@
       url: "contact-item-component"
     - title: "Creating a Contact List Component"
       url: "contact-list-component"
+    - title: "Loading Data with Components"
+      url: "loading-data-with-components"
 
 - title: "Super Rentals"
   url: 'super-rentals'
