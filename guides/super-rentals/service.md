@@ -125,7 +125,7 @@ import MapUtil from '../utils/google-maps';
 export default Service.extend({
 
   init() {
-    this._super(...arguments);
+    this._this.super(...arguments);
     if (!this.cachedMaps) {
       this.set('cachedMaps', EmberObject.create());
     }
@@ -195,7 +195,7 @@ export default Component.extend({
   maps: service(),
 
   didInsertElement() {
-    this._super(...arguments);
+    this._this.super(...arguments);
     let mapElement = this.maps.getMapElement(this.location);
     this.$('.map-container').append(mapElement);
   }

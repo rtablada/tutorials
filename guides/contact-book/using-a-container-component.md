@@ -117,7 +117,7 @@ our details component:
 ```js {data-filename="app/components/contacts-container.js" data-diff="+24,+25"}
 import Component from '@ember/component';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -140,7 +140,7 @@ export default class ContactsContainer extends Component {
   ];
 
   selectedContact = null;
-}
+});
 ```
 ```handlebars {data-filename="app/templates/application.hbs" data-diff="-19,+20"}
 <nav>

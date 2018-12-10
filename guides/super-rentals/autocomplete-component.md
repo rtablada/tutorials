@@ -81,7 +81,7 @@ export default Component.extend({
   value: '',
 
   init() {
-    this._super(...arguments);
+    this._this.super(...arguments);
     this.filter('').then((results) => this.set('results', results));
   },
 
@@ -257,7 +257,7 @@ export default Component.extend({
   value: '',
 
   init() {
-    this._super(...arguments);
+    this._this.super(...arguments);
     this.filter('').then((results) => this.set('results', results));
     this.filter('').then((allResults) => {
       this.set('results', allResults.results);

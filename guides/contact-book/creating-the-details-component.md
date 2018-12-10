@@ -193,14 +193,14 @@ object that represents the selected contact. Open up the component file at
 ```js {data-filename="app/components/contact-details.js" data-diff="+4,+5,+6,+7,+8,+9"}
 import Component from '@ember/component';
 
-export default class ContactDetails extends Component {
+export default Component.extend({
   contact = {
     name: 'Zoey',
     email: 'zoey@emberjs.com',
     phone: '555-1232',
     note: 'Met at EmberConf!',
   };
-}
+});
 ```
 
 Now, back in the template, we can replace the static text values we had as
@@ -362,14 +362,14 @@ necessary:
 ```js {data-filename="app/components/contact-details.js" data-diff="-4,-5,-6,-7,-8,-9"}
 import Component from '@ember/component';
 
-export default class ContactDetails extends Component {
+export default Component.extend({
   contact = {
     name: 'Zoey',
     email: 'zoey@emberjs.com',
     phone: '555-1232',
     note: 'Met at EmberConf!',
   };
-}
+});
 ```
 
 That's all there is to it! However, if you save and refresh, you'll see that

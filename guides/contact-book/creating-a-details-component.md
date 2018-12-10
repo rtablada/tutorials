@@ -107,14 +107,14 @@ template:
 ```js {data-filename="app/components/contact-list.js" data-diff="+4,+5,+6,+7,+8,+9"}
 import Component from '@ember/component';
 
-export default class ContactList extends Component {
+export default Component.extend({
   contact = {
     name: 'Zoey',
     email: 'zoey@emberjs.com',
     phone: '555-1232',
     note: 'Met at EmberConf!',
   };
-}
+});
 ```
 ```handlebars {data-filename="app/templates/components/contact-details.hbs" data-diff="-2,+3,-11,+12,-20,+21,-29,+30"}
 <section>
@@ -257,7 +257,7 @@ number and note:
 import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
 
-export default class ContactList extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -287,12 +287,12 @@ export default class ContactList extends Component {
         || searchRegex.test(contact.email);
     });
   }
-}
+});
 ```
 ```js {data-filename="app/components/contacts-container.js" data-diff="+4,+5,+6,+7,+8,+9,+10,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20,+21,+22,+23"}
 import Component from '@ember/component';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -313,7 +313,7 @@ export default class ContactsContainer extends Component {
       note: 'Met at EmberFest!',
     },
   ];
-}
+});
 ```
 
 Notice that we didn't completely remove the `contacts` field from `ContactList`,
@@ -348,7 +348,7 @@ selected a contact to view:
 ```js {data-filename="app/components/contact-list.js" data-diff="-4,-5,-6,-7,-8,-9,+10,+11"}
 import Component from '@ember/component';
 
-export default class ContactList extends Component {
+export default Component.extend({
   contact = {
     name: 'Zoey',
     email: 'zoey@emberjs.com',
@@ -357,12 +357,12 @@ export default class ContactList extends Component {
   };
   /****** Arguments ******/
   contact = null;
-}
+});
 ```
 ```js {data-filename="app/components/contacts-container.js" data-diff="+24,+25"}
 import Component from '@ember/component';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -385,7 +385,7 @@ export default class ContactsContainer extends Component {
   ];
 
   selectedContact = null;
-}
+});
 ```
 ```handlebars {data-filename="app/templates/components/contacts-container.hbs" data-diff="-3,+4"}
 <div class="container">
@@ -510,7 +510,7 @@ import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
 import { action, computed } from '@ember-decorators/object';
 
-export default class ContactList extends Component {
+export default Component.extend({
   /****** Arguments ******/
   contacts = null;
   onContactSelected = null;
@@ -534,7 +534,7 @@ export default class ContactList extends Component {
       this.onContactSelected(contact);
     }
   }
-}
+});
 ```
 
 Note that the function here is marked with the `@action` decorator. This tells
@@ -577,7 +577,7 @@ to the `ContactList` so it can set the `selectedContact` field.
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -605,7 +605,7 @@ export default class ContactsContainer extends Component {
   setSelectedContact(contact) {
     this.set('selectedContact', contact);
   }
-}
+});
 ```
 
 One interesting thing to note here is that we use `this.set` to set the selected
@@ -646,7 +646,7 @@ action with `mut`:
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -674,7 +674,7 @@ export default class ContactsContainer extends Component {
   setSelectedContact(contact) {
     this.set('selectedContact', contact);
   }
-}
+});
 ```
 ```handlebars {data-filename="app/templates/components/contacts-container.hbs" data-diff="-2,+3,+4,+5,+6"}
 <div class="container">
@@ -705,7 +705,7 @@ lets add `@selectedContact` as an argument to `ContactList`, so we can tell it
 which contact to highlight:
 
 ```js {data-filename="app/components/contact-list.js" data-diff="-5,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-17,-18"}
-export default class ContactList extends Component {
+export default Component.extend({
   /****** Arguments ******/
   contacts = null;
   onContactSelected = null;
@@ -729,5 +729,5 @@ export default class ContactList extends Component {
       this.onContactSelected(contact);
     }
   }
-}
+});
 ```

@@ -166,7 +166,7 @@ actually filter the list. To do that, we'll use a computed property:
 import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
 
-export default class ContactList extends Component {
+export default Component.extend({
   /****** Arguments ******/
   contacts = null;
 
@@ -185,7 +185,7 @@ export default class ContactList extends Component {
         || searchRegex.test(contact.email);
     });
   }
-}
+});
 ```
 
 As you can see, we've added `filteredContacts` as a standard class getter
@@ -242,7 +242,7 @@ import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
 import { action, computed } from '@ember-decorators/object';
 
-export default class ContactList extends Component {
+export default Component.extend({
   /****** Arguments ******/
   contacts = null;
   onContactSelected = null;
@@ -269,7 +269,7 @@ export default class ContactList extends Component {
       this.onContactSelected(contact);
     }
   }
-}
+});
 ```
 
 Note that the function here is marked with the `@action` decorator. This tells
@@ -312,7 +312,7 @@ to the `ContactList` so it can set the `selectedContact` field.
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -340,7 +340,7 @@ export default class ContactsContainer extends Component {
   setSelectedContact(contact) {
     this.set('selectedContact', contact);
   }
-}
+});
 ```
 
 One interesting thing to note here is that we use `this.set` to set the selected
@@ -384,7 +384,7 @@ action with `mut`:
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
 
-export default class ContactsContainer extends Component {
+export default Component.extend({
   contacts = [
     {
       name: 'Zoey',
@@ -412,7 +412,7 @@ export default class ContactsContainer extends Component {
   setSelectedContact(contact) {
     this.set('selectedContact', contact);
   }
-}
+});
 ```
 ```handlebars {data-filename="app/templates/components/contacts-container.hbs" data-diff="+3,-4"}
 <ContactList
@@ -457,7 +457,7 @@ import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
 import { action, computed } from '@ember-decorators/object';
 
-export default class ContactList extends Component {
+export default Component.extend({
   /****** Arguments ******/
   contacts = null;
   selectedContact = null;
@@ -485,7 +485,7 @@ export default class ContactList extends Component {
       this.onContactSelected(contact);
     }
   }
-}
+});
 ```
 
 Then, we'll add a class to the `contact` that is equal to `selectedContact`. In

@@ -43,25 +43,25 @@ Here we will import from `@ember/component` and export a new class called `Conta
 ```js {data-filename="app/components/contact-list.js"}
 import Component from '@ember/component';
 
-export default class ContactList extends Component {
+export default Component.extend({
 
-}
+});
 ```
 
 Now we have the basic class for our `ContactList` component and we can start looking at how this JavaScript class interacts with our component template.
 First, let's create a constructor so that we can set a property called `listTitle` to the string `My Contacts` in our `ContactList` class.
-In this constructor we need to call `super(...arguments)` before we use `this` so that Ember can setup the basic structure for our component.
+In this constructor we need to call `this.super(...arguments)` before we use `this` so that Ember can setup the basic structure for our component.
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+4,+5,+6,+7,+8"}
 import Component from '@ember/component';
 
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.listTitle = 'My Contacts';
   }
-}
+});
 ```
 
 Now to use the value of `listTitle`, let's go to our `contact-list.hbs` template file.
@@ -94,9 +94,9 @@ In our component class, let's create a new array of objects and set this to a pr
 ```js {data-filename="app/components/contact-list.js" data-diff="+8 ,+9 ,+10 ,+11 ,+12 ,+13 ,+14 ,+15 ,+16 ,+17"}
 import Component from '@ember/component';
 
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.listTitle = 'My Contacts';
     this.contacts = [
@@ -110,7 +110,7 @@ export default class ContactList extends Component {
       },
     ];
   }
-}
+});
 ```
 
 Now that we have this data set to a property on our component, let's look at how we can work with this data in our template.

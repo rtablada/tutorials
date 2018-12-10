@@ -10,9 +10,9 @@ In the constructor let's first set `contacts` to an empty array, then using `win
 we can set the value of `contacts` back to our data array after 2000 milliseconds:
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+6,+7,+8,+9,+10,+11,+12,+13,+14,+15,+16,+17,+18,-19,-20,-21,-22,-23,-24,-25,-26,-27,-28"}
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.listTitle = 'My Contacts';
     this.contacts = [];
@@ -39,7 +39,7 @@ export default class ContactList extends Component {
       },
     ];
   }
-}
+});
 ```
 
 Now our application is throwing an error that says:
@@ -52,9 +52,9 @@ This means that any parts of our templates that require the `contacts` value wil
 Let's use `this.set` to update the `contacts` value for our list:
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+5,+6,-7,-8,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20,-21,-22,-23,-24,-25,-26,-27,-28,-29,-30"}
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
@@ -84,7 +84,7 @@ export default class ContactList extends Component {
       ];
     }, 2000);
   }
-}
+});
 ```
 
 Now our application is loading the contact data asynchronously, but the contact list is empty when there is no data.
@@ -96,9 +96,9 @@ In our component, let's add a new property called `loading` and in the construct
 Then in the `setTimeout` let's reset `loading` to false before setting the value of our contacts array:
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+7,+9"}
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
@@ -117,7 +117,7 @@ export default class ContactList extends Component {
       ]);
     }, 2000);
   }
-}
+});
 ```
 
 Now we can use the `this.loading` property in our template.
@@ -170,9 +170,9 @@ Here, we'll parse the response as json, and we'll chain another `.then` call to 
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+9,+10,+11,+12,+13,+14,-15,-16,-17,-18,-19,-20,-21,-22,-23,-24,-25,-26,-27"}
 
-export default class ContactList extends Component {
-  constructor() {
-    super(...arguments);
+export default Component.extend({
+  init() {
+    this.super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
@@ -198,7 +198,7 @@ export default class ContactList extends Component {
       ]);
     }, 2000);
   }
-}
+});
 ```
 
 Now we are loading data from the API and directly displaying the data in our `<ContactList>` component!
